@@ -1,7 +1,8 @@
 //import { Button } from '@material-ui/core'
 import { Typography } from '@mui/material'
 import React from 'react'
-import ViewMoreButton from './Viewmore'
+import { Link } from 'react-router-dom'
+import ViewMoreButton from '../../GeneralCompanents/Viewmore'
 
 
 function Intro() {
@@ -26,7 +27,7 @@ function Intro() {
                                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui dolor esse tempora dicta nobis, magni labore officiis in ullam non dolore similique ducimus nihil blanditiis tempore animi. Mollitia, laudantium maxime?Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui dolor esse tempora dicta nobis, magni labore officiis in ullam non dolore similique ducimus nihil blanditiis tempore animi. Mollitia, laudantium maxime?Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui dolor esse tempora dicta nobis, magni labore officiis in ullam non dolore similique ducimus nihil blanditiis tempore animi. Mollitia, laudantium maxime?
                                 </Typography>
 
-                                <ViewMoreButton text="Join Us" />
+                                <Link to="/flight">  <ViewMoreButton text="Book flight" /></Link>
 
 
                         </center>

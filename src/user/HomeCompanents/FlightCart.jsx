@@ -1,7 +1,8 @@
 
 import { Avatar, Button, Card, CardActions, CardContent, CardHeader, makeStyles, Typography } from '@material-ui/core'
-import { ArrowRightAlt, ArrowRightAltTwoTone } from '@mui/icons-material';
+import { ArrowRightAlt} from '@mui/icons-material';
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 
 const blueButtonColor = "rgb(6, 6, 49)";
@@ -55,7 +56,7 @@ function FlightCart() {
 
                         </CardContent>
                         <CardActions>
-                                <Button size="small" className={classes.bookNowButton} >Book now</Button>
+                                <Link to={"/bookFlight"} ><Button size="small" className={classes.bookNowButton} >Book now</Button></Link>
                                 <Typography className={classes.priceName} >₦30,00</Typography>
                         </CardActions>
                 </Card>

@@ -4,9 +4,9 @@ import { makeStyles, Modal } from '@material-ui/core';
 import { Container } from '@mui/system';
 import { Link } from 'react-router-dom'
 import "../loginCompanents/Login.css"
-import LoginTextField from '../loginCompanents/LoginTextField';
 import MyButton from '../loginCompanents/MyButton';
-
+import NavButton from '../../GeneralCompanents/NavButton';
+import LoginTextField from '../../GeneralCompanents/LoginTextField';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -31,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
 var sopen;
 
 
-function Nav() {
+function Nav(p) {
         const classes = useStyles();
         const [open, setOpen] = useState(false);
 
@@ -50,10 +50,10 @@ function Nav() {
                                 <div className='ulDiv' >
                                         <div style={style.ul} className="ulpc">
 
-                                                <button className="nav-list" onClick={""}> Home </button>
-                                                <button className="nav-list" onClick={""}> About us</button>
-                                                <button className="nav-list" onClick={""}> Flight</button>
-                                                <button className="nav-list" onClick={() => setOpen(true)}>Login</button>
+                                                <Link to="/"> <NavButton text="Home" color={p.color} /></Link>
+                                                <Link to="/aboutus"> <NavButton text="About us" color={p.color} /></Link>
+                                                <Link to="/flight"> <NavButton text=" Flight" color={p.color} /></Link>
+                                                <NavButton text="Login" onClick={() => setOpen(true)} color={p.color} />
 
                                         </div>
                                         {/* <ul style={style.ulIcons} cl>LassName="ulmb">
@@ -83,7 +83,7 @@ function Nav() {
                                                         <LoginTextField text="Email" />
                                                         <LoginTextField typ="password" text="Password" />
                                                         <MyButton text="Login" />
-                                                        <MyButton text="SignUp" />
+                                                        <MyButton text="Forgot password" />
 
                                                         <Link to='/' >
 
@@ -96,7 +96,7 @@ function Nav() {
                                                                                 {
                                                                                         marginTop: "10px",
                                                                                         fontWeight: "bold",
-                                                                                        background: "red"
+                                                                                        background: "red",
                                                                                 }
                                                                         }
                                                                         onClick={() => setOpen(false)}

@@ -1,0 +1,194 @@
+* {
+        margin: 0px;
+        padding: 0px;
+        color: white;
+
+
+}
+
+.mainHome {
+
+        background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(/public/images/bacground.jpg);
+        background-position: center;
+        width: 100%;
+        height: 80vh;
+        padding-left: 10px;
+        padding-right: 10px;
+        max-width: 98.5%;
+        background-size: cover;
+        /* background-attachment: fixed; */
+}
+
+.ulpc {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 10px;
+        margin-top: 1.3%;
+        /* margin-left: 30%; */
+        margin-right: 2%;
+
+}
+
+.nav-list {
+
+        font-size: 35px;
+        font-weight: bold;
+        font-family: sans-serif;
+        cursor: pointer;
+        border: none;
+        background-color: transparent;
+        justify-content: space-around;
+}
+
+.nav-list:hover {
+        transition: all 0.5s;
+        font-size: 30px;
+        color: gray;
+}
+
+.appbar {
+        background-color: red;
+}
+
+
+/* 
+.li4 {
+        margin-left: auto;
+} */
+
+.ulmb {
+        display: none;
+}
+
+
+@media only screen and (max-width: 800px) {
+
+        .ulpc {
+                display: none;
+        }
+
+        .ulmb {
+                display: flex;
+
+        }
+
+}
+
+.myInput {
+        width: 180px;
+        height: 40px;
+        border-top-left-radius: 9px;
+        border-bottom-left-radius: 9px;
+        background-color: gray;
+        border: none;
+        padding: 2px;
+        margin-top: 20px;
+        font-size: 30px;
+        color: white;
+}
+
+.myInput2 {
+        width: 180px;
+        height: 43px;
+        margin-left: -2px;
+        background-color: gray;
+        border: none;
+        padding: 2px;
+        margin-top: 20px;
+        font-size: 30px;
+        color: white;
+}
+
+.available-flight-text {
+        color: black;
+        font-family: sans-serif;
+        font-weight: bold;
+        margin-left: 40%;
+        padding-top: 20px;
+        margin-bottom: opx;
+}
+
+.joinus-button {
+        border-radius: 8px;
+        background-color: rgb(6, 6, 49);
+        color: #FFFFFF;
+        text-align: center;
+        font-size: 28px;
+        padding: 20px;
+        /* width: 200px; */
+        transition: all 0.5s;
+        cursor: pointer;
+        border: none;
+        margin-top: 20px;
+        margin-right: 20px;
+        /* height: 70px; */
+}
+
+.joinus-button span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+}
+
+.joinus-button span:after {
+        content: '\00bb';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s;
+}
+
+.joinus-button:hover span {
+        padding-right: 25px;
+}
+
+.joinus-button:hover span:after {
+        opacity: 1;
+        right: 0;
+}
+
+.home-book-flight {
+        /* margin-top: 20px; */
+        display: flex;
+        width: 95%;
+        background-color: gray;
+        margin: 30px;
+        border-radius: 10px;
+}
+
+.home-button-viewmore {
+        margin-top: 5%;
+}
+
+.cardDiv {
+        width: 90%;
+        overflow: auto;
+
+}
+
+.arrow {
+
+        font-size: 100px;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        padding-top: 170px;
+        background-color: #fff;
+        height: 70px;
+        border: none;
+        cursor: pointer;
+        transition: all 0.5s;
+        background-color: transparent;
+        border: none;
+}
+
+.arrow :hover {
+        font-size: 90px;
+}
+
+.arrow span {
+        color: rgb(6, 6, 49);
+}

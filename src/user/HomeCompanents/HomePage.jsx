@@ -1,11 +1,11 @@
 import React from 'react'
-import Nav from '../HomeCompanents/Nav'
-import Intro from '../HomeCompanents/Intro'
-import Join from '../HomeCompanents/Join'
-import FlightCart from '../HomeCompanents/FlightCart'
-import { ViewMoreArrows } from '../HomeCompanents/Viewmore'
+import Nav from './Nav'
+import Intro from './Intro'
+import Join from './Join'
+import FlightCart from './FlightCart'
+import { ViewMoreArrows } from '../../GeneralCompanents/Viewmore'
 import { Typography } from '@mui/material'
-import Footer from '../HomeCompanents/Footer'
+import Footer from './Footer'
 
 function Home() {
 

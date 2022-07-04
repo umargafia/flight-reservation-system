@@ -1,5 +1,5 @@
 import { makeStyles } from '@material-ui/core';
-import { TextField } from '@mui/material';
+import { TextField as MyTextField } from '@mui/material';
 import React from 'react'
 
 const useStyles = makeStyles({
@@ -8,17 +8,17 @@ const useStyles = makeStyles({
         }
 });
 
-function LoginTextField(props) {
+function LoginTextField({ typ, varian, text }) {
         const classes = useStyles();
         return (
-                <TextField
-                        type={props.typ}
+                <MyTextField
+                        type={typ}
                         margin="dense"
-                        label={props.text}
-                        variant="outlined"
+                        label={text}
+                        variant={varian}
                         className={classes.input}
                         fullWidth
-                        
+
                 />
         )
 }
