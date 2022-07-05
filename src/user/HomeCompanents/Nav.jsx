@@ -82,7 +82,7 @@ function Nav(p) {
                                                 <form className='login-span'>
                                                         <LoginTextField text="Email" />
                                                         <LoginTextField typ="password" text="Password" />
-                                                        <MyButton text="Login" />
+                                                        <Link to="/admin"> <MyButton text="Login" /></Link>
                                                         <MyButton text="Forgot password" />
 
                                                         <Link to='/' >

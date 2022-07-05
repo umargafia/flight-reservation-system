@@ -1,12 +1,15 @@
-import { Container } from '@mui/material'
+import { Container as div } from '@mui/material'
 import React from 'react'
+import SearchArea from '../user/FlightCompanents/SearchArea'
 import ANav from './ANav'
 
 const AdminHome = () => {
   return (
-    <Container>
-      <ANav/>
-    </Container>
+    <div>
+      <ANav />
+      <SearchArea />
+      
+    </div>
   )
 }
 
