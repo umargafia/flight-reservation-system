@@ -1,6 +1,7 @@
 import { Container as div } from '@mui/material'
 import React from 'react'
 import SearchArea from '../user/FlightCompanents/SearchArea'
+import ABody from './ABody'
 import ANav from './ANav'
 
 const AdminHome = () => {
@@ -8,7 +9,8 @@ const AdminHome = () => {
     <div>
       <ANav />
       <SearchArea />
-      
+      <ABody/>
+     
     </div>
   )
 }
