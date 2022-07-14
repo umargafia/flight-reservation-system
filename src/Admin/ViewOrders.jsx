@@ -1,24 +1,37 @@
-import { Button, makeStyles, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@material-ui/core';
-import * as React from 'react';
-import { Link } from 'react-router-dom';
-import ViewMoreButton from '../GeneralCompanents/Viewmore';
+import {
+  Button,
+  makeStyles,
+  Paper,
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableHead,
+  TableRow,
+} from "@material-ui/core";
+import * as React from "react";
+import { Link } from "react-router-dom";
+import ViewMoreButton from "../GeneralCompanents/Viewmore";
 
 const useStyles = makeStyles({
   table: {
     minWidth: 650,
   },
   main: {
-    margin:"15px"
-  }
+    margin: "15px",
+  },
 });
 
 const ViewOrders = () => {
   const classes = useStyles();
   return (
-    <div className={classes.main} >
-      <Link to={"/admin"} > <ViewMoreButton text={"Back"} /></Link>
+    <div className={classes.main}>
+      <Link to={"/admin"}>
+        {" "}
+        <ViewMoreButton text={"Back"} />
+      </Link>
       <center>
-        <TableContainer component={Paper} style={{ width: "80%", margin: 30 }} >
+        <TableContainer component={Paper} style={{ width: "80%", margin: 30 }}>
           <Table className={classes.table} aria-label="simple table">
             <TableHead>
               <TableRow>
@@ -32,9 +45,8 @@ const ViewOrders = () => {
               </TableRow>
             </TableHead>
             <TableBody>
-
-              <TableRow >
-                <TableCell >Frozen</TableCell>
+              <TableRow>
+                <TableCell>Frozen</TableCell>
                 <TableCell align="right">umar@gmail.com</TableCell>
                 <TableCell align="right">1234567</TableCell>
                 <TableCell align="right">24124</TableCell>
@@ -43,9 +55,8 @@ const ViewOrders = () => {
                 <TableCell align="right">2</TableCell>
               </TableRow>
 
-
-              <TableRow >
-                <TableCell >Frozen</TableCell>
+              <TableRow>
+                <TableCell>Frozen</TableCell>
                 <TableCell align="right">umar@gmail.com</TableCell>
                 <TableCell align="right">1234567</TableCell>
                 <TableCell align="right">24124</TableCell>
@@ -53,8 +64,8 @@ const ViewOrders = () => {
                 <TableCell align="right">1</TableCell>
                 <TableCell align="right">2</TableCell>
               </TableRow>
-              <TableRow >
-                <TableCell >Frozen</TableCell>
+              <TableRow>
+                <TableCell>Frozen</TableCell>
                 <TableCell align="right">umar@gmail.com</TableCell>
                 <TableCell align="right">1234567</TableCell>
                 <TableCell align="right">24124</TableCell>
@@ -62,13 +73,12 @@ const ViewOrders = () => {
                 <TableCell align="right">1</TableCell>
                 <TableCell align="right">2</TableCell>
               </TableRow>
-
             </TableBody>
           </Table>
         </TableContainer>
       </center>
     </div>
-  )
-}
+  );
+};
 
-export default ViewOrders
+export default ViewOrders;

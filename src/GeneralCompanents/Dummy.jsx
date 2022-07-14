@@ -1,15 +1,12 @@
-import { makeStyles } from '@material-ui/core';
-import React from 'react'
+import { makeStyles } from "@material-ui/core";
+import React from "react";
 
-
-const useStyles = makeStyles({
-
-});
+const useStyles = makeStyles({});
 
 const classes = useStyles();
 
 function name() {
-        const classes = useStyles();
+  const classes = useStyles();
 }
 
-export default name
+export default name;

@@ -5,8 +5,7 @@ import { AppBar, Button, Toolbar, Typography } from "@mui/material";
 import { Container } from "@mui/system";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import LoginTextField from "../GeneralCompanents/LoginTextField";
-import MyButton from "../user/loginCompanents/MyButton";
+import AForm from "./Form";
 
 const useStyle = makeStyles({
   logout: {
@@ -19,13 +18,14 @@ const useStyle = makeStyles({
   },
   container: {
     width: "500px",
-    height: 550,
     position: "absolute",
-    top: 0,
-    buttom: 0,
+    top: 10,
+    buttom: 10,
     left: 0,
     right: 0,
     margin: "auto",
+    marginTop: "20px",
+    marginBottom: "20px",
   },
   navDiv: {
     display: "flex",
@@ -38,11 +38,11 @@ const useStyle = makeStyles({
 const ANav = () => {
   const [open, setOpen] = useState(false);
   const classes = useStyle();
- const buttonStyle = {
-   marginTop: "10px",
-   fontWeight: "bold",
-   background: "red",
- };
+  const buttonStyle = {
+    marginTop: "10px",
+    fontWeight: "bold",
+    background: "red",
+  };
   return (
     <>
       <AppBar>
@@ -62,7 +62,6 @@ const ANav = () => {
               style={{
                 color: "white",
                 fontWeight: "bolder",
-              
               }}
             >
               <Add color="action" />
@@ -79,7 +78,7 @@ const ANav = () => {
         <Container className="login-container">
           <center>
             <Typography
-              color={"rgb(74, 153, 218)"}
+              color="blue"
               fontWeight={"700"}
               fontSize="70px"
               fontFamily={"sans-serif"}
@@ -87,7 +86,8 @@ const ANav = () => {
             >
               Add Flight
             </Typography>
-            <form className="login-span">
+            <form>
+              <AForm />
               <Button
                 variant="contained"
                 size="large"

@@ -21,8 +21,6 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-var sopen;
-
 function Nav(p) {
   const classes = useStyles();
   const [open, setOpen] = useState(false);
@@ -61,12 +59,6 @@ function Nav(p) {
               color={p.color}
             />
           </div>
-          {/* <ul style={style.ulIcons} cl>LassName="ulmb">
-                                        <li className='list->L3'> <HomeIcon fontSize='large' /> </li>
-                                        <li className='list-3'> <Flight /></li>
-                                        <li className='list-3'><InfoOutlined /> </li>
-                                        <li className='li4'><Login /></li>
-                                </ul> */}
         </div>
       </AppBar>
       <Modal open={open} className={classes.container}>

@@ -1,11 +1,11 @@
-.bkDiv{
-        width: 60%;
-        /* height: 500px; */
-        border: 1px solid black ;
-        margin-left: 20%;
-        margin-top: 10%;
-        border-radius: 10px;
-        box-shadow: 2px black black;
-        padding: 20px;
-        margin-bottom: 30px;
+.bkDiv {
+  width: 60%;
+  /* height: 500px; */
+  border: 1px solid black;
+  margin-left: 20%;
+  margin-top: 10%;
+  border-radius: 10px;
+  box-shadow: 2px black black;
+  padding: 20px;
+  margin-bottom: 30px;
 }
