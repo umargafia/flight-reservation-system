@@ -7,6 +7,7 @@ import About from './user/AboutCompanents/About';
 import Payment from './user/PaymentCompanents/Payment';
 import SucccesfulPayment from './user/PaymentCompanents/SucccesfulPayment';
 import AdminHome from './Admin/AdminHome';
+import ViewOrders from './Admin/ViewOrders';
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
         <Route path='/payment' element={<Payment />} />
         <Route path='/sucess' element={<SucccesfulPayment />} />
         <Route path='/Admin' element={<AdminHome/>} />
+        <Route path='/vieworder' element={<ViewOrders/>}/>
       </Routes>
     </Router>
   );

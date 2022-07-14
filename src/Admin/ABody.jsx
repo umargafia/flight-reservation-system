@@ -1,46 +1,57 @@
-import { makeStyles } from '@material-ui/core';
-import { Avatar, Card, CardHeader } from '@mui/material'
-import { Container } from '@mui/system';
+import { Card, IconButton, makeStyles } from '@material-ui/core'
+import { Add } from '@material-ui/icons'
+import { Button, Grid, Typography } from '@mui/material'
 import React from 'react'
+import ACard from './ACard'
 
 
-const blueButtonColor = "rgb(6, 6, 49)";
 
 const useStyles = makeStyles({
-        root: {
-                minWidth: 300,
-                maxWidth: 500,
-                background: blueButtonColor,
-                margin: "20px",
-                marginLeft: "0px",
-                color:"black"
-        },
-        avatar: {
-                background: "gray"
-        },
+        mainCard: {
+                margin: 20,
+                padding: 10,
 
 
 
-});
+        }
+})
+
 
 
 const ABody = () => {
-        const classes = useStyles()
+        const classes = useStyles();
         return (
-                <div>
-                        <Card className={classes.root}>
-                                <CardHeader
-                                        avatar={
-                                                <Avatar className={classes.avatar}>C</Avatar>
-
-                                        }
-                                        title="Flight Name"
-
-
-                                />
-                        </Card>
+                <Card className={classes.mainCard} elevation={10}>
+                <div style={{
+                        color:"black"
+                }}>
+                <Typography>Flight</Typography>
+                <Button > Add <Add color='primary' fontSize='30px' /> </Button>
                 </div>
+                        <Grid container >
+
+                                <Grid item md={3}>
+                                        <ACard />
+                                </Grid>
+                                <Grid item md={3}>
+                                        <ACard />
+                                </Grid>
+                                <Grid item md={3}>
+                                        <ACard />
+                                </Grid>
+                                <Grid item md={3}>
+                                        <ACard />
+                                </Grid>
+                                <Grid item md={3}>
+                                        <ACard />
+                                </Grid>
+                                <Grid item md={3}>
+                                        <ACard />
+                                </Grid>
+                        </Grid>
+                </Card>
         )
 }
 
 export default ABody
+
