@@ -22,25 +22,10 @@ const ABody = () => {
         <Typography>Flight</Typography>
       </div>
       <Grid container>
-        <Grid item md={3}>
+       
           <ACard />
         </Grid>
-        <Grid item md={3}>
-          <ACard />
-        </Grid>
-        <Grid item md={3}>
-          <ACard />
-        </Grid>
-        <Grid item md={3}>
-          <ACard />
-        </Grid>
-        <Grid item md={3}>
-          <ACard />
-        </Grid>
-        <Grid item md={3}>
-          <ACard />
-        </Grid>
-      </Grid>
+      
     </Card>
   );
 };

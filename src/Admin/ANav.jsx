@@ -1,11 +1,11 @@
 import { makeStyles, Modal } from "@material-ui/core";
-import { Add } from "@material-ui/icons";
+import { Add, Height } from "@material-ui/icons";
 import { AdminPanelSettings } from "@mui/icons-material";
 import { AppBar, Button, Toolbar, Typography } from "@mui/material";
 import { Container } from "@mui/system";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import AForm from "./Form";
+import AForm from "./AForm";
 
 const useStyle = makeStyles({
   logout: {
@@ -20,12 +20,13 @@ const useStyle = makeStyles({
     width: "500px",
     position: "absolute",
     top: 10,
-    buttom: 10,
+    buttom: 20,
     left: 0,
     right: 0,
     margin: "auto",
     marginTop: "20px",
-    marginBottom: "20px",
+    marginBottom: "40px",
+    paddingBottom: "20px",
   },
   navDiv: {
     display: "flex",
@@ -42,7 +43,9 @@ const ANav = () => {
     marginTop: "10px",
     fontWeight: "bold",
     background: "red",
+    with: 200,
   };
+
   return (
     <>
       <AppBar>
@@ -75,7 +78,13 @@ const ANav = () => {
       </AppBar>
 
       <Modal open={open} className={classes.container}>
-        <Container className="login-container">
+        <div
+          className="login-container"
+          style={{
+            padding: "20px",
+            overflow: "auto",
+          }}
+        >
           <center>
             <Typography
               color="blue"
@@ -86,8 +95,8 @@ const ANav = () => {
             >
               Add Flight
             </Typography>
-            <form>
-              <AForm />
+            <div>
+              <AForm updateTextFields={()=> setOpen(false) }/>
               <Button
                 variant="contained"
                 size="large"
@@ -97,9 +106,9 @@ const ANav = () => {
               >
                 Close
               </Button>
-            </form>
+            </div>
           </center>
-        </Container>
+        </div>
       </Modal>
     </>
   );

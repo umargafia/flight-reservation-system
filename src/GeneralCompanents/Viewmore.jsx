@@ -15,7 +15,7 @@ function ViewMoreButton({ text, onclick }) {
 
 function ViewMoreArrows() {
   return (
-    <Link to="/flight">
+    <Link to="/flight" style={{textDecoration:"none"}} >
       <button className="arrow">
         <span>&#187;</span>
       </button>

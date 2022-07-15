@@ -1,0 +1,23 @@
+{
+  "cart": [
+    {
+      "id": 1,
+      "name": "kt airline",
+      "start": "katsina",
+      "stop": "Abuja",
+      "date": "1/05/2022",
+      "time": 2,
+      "price": 30000
+    },
+    {
+      "id": 2,
+      "name": "kn airline",
+      "start": "kano",
+      "stop": "Abuja",
+      "date": "4/07/2022",
+      "time": 1,
+      "price": 25000
+    }
+    
+  ]
+}

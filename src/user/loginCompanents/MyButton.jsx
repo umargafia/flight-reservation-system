@@ -1,22 +1,22 @@
-
 import { Button } from "@mui/material";
+import { type } from "@testing-library/user-event/dist/type";
 import React from "react";
 
-
-function MyButton(props) {
+function MyButton({ bg, onTap, text }) {
   return (
     <Button
       variant="contained"
       size="large"
       fullWidth
+      type='submit'
       style={{
         marginTop: "10px",
         fontWeight: "bold",
-        background: props.bg,
+        background: bg,
       }}
-      onClick={() => props.onTap}
+      onClick={onTap}
     >
-      {props.text}
+      {text}
     </Button>
   );
 }

@@ -15,10 +15,6 @@ function Home() {
       <div className="home-book-flight">
         <div className="home-book-flight  cardDiv">
           <FlightCart />
-          <FlightCart />
-          <FlightCart />
-          <FlightCart />
-          <FlightCart />
         </div>
 
         <div>
