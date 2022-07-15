@@ -1,23 +1,59 @@
 {
   "cart": [
     {
-      "id": 1,
-      "name": "kt airline",
-      "start": "katsina",
+      "name": "Kano airLine",
+      "start": "Kano",
       "stop": "Abuja",
-      "date": "1/05/2022",
-      "time": 2,
-      "price": 30000
+      "date": "2022-07-18",
+      "time": "1",
+      "price": "5000",
+      "id": 2
     },
     {
-      "id": 2,
-      "name": "kn airline",
-      "start": "kano",
+      "name": "Kano airLine",
+      "start": "Kano",
       "stop": "Abuja",
-      "date": "4/07/2022",
-      "time": 1,
-      "price": 25000
+      "date": "2022-07-18",
+      "time": "1",
+      "price": "5000",
+      "id": 2
+    },
+    {
+      "name": "Kano airLine",
+      "start": "Kano",
+      "stop": "Abuja",
+      "date": "2022-07-18",
+      "time": "1",
+      "price": "5000",
+      "id": 2
+    },
+    {
+      "name": "Kano airLine",
+      "start": "Kano",
+      "stop": "Abuja",
+      "date": "2022-07-18",
+      "time": "1",
+      "price": "5000",
+      "id": 2
+    },
+    {
+      "name": "Kano airLine",
+      "start": "Kano",
+      "stop": "Abuja",
+      "date": "2022-07-18",
+      "time": "1",
+      "price": "5000",
+      "id": 2
+    },
+    {
+      "name": "Kano airLine",
+      "start": "Kano",
+      "stop": "Abuja",
+      "date": "2022-07-18",
+      "time": "1",
+      "price": "5000",
+      "id": 2
     }
-    
+
   ]
 }
