@@ -51,7 +51,7 @@ function ACard() {
   }, []);
 
   const handleDeleate = async (id) => {
-    await fetch(`http://localhost:8000/cart/{id}`, {
+    await fetch(`http://localhost:8000/cart/${id}`, {
       method: "DELETE",
     });
     const newCart = cart.filter((cart) => cart.id != id);
