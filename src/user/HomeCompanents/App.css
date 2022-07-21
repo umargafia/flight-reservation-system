@@ -181,3 +181,27 @@
 .arrow span {
   color: rgb(6, 6, 49);
 }
+
+.loading {
+  width: 90px;
+  height: 90px;
+  margin-left: 46%;
+  border: 5px dotted rgb(6, 6, 49);
+  border-radius: 50%;
+  /* background: white; */
+  animation: rotate 4s infinite;
+}
+@keyframes rotate {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to{
+        transform:rotateZ(360deg);
+  }
+}
+
+.mainLoading{
+  width: 100%;
+  justify-content: center;
+}
+

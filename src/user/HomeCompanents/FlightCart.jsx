@@ -12,9 +12,8 @@ import { ArrowRightAlt } from "@mui/icons-material";
 import { Typography } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-
+import Axios from "axios";
 const blueButtonColor = "rgb(6, 6, 49)";
-
 const useStyles = makeStyles({
   root: {
     minWidth: 300,
@@ -34,35 +33,39 @@ function FlightCart() {
   const [ispending, setpending] = useState(true);
 
   useEffect(() => {
-    fetch("http://localhost:8000/cart")
-      .then((res) => res.json())
-      .then((data) => {
-        setCart(data);
-       setpending(false);
-      });
+    Axios.get("http://localhost:4000/home").then((data) => {
+      console.log(data.data);
+      setCart(data.data);
+      setpending(false);
+    });
   }, []);
 
   return (
     <>
       {ispending && (
-        <div style={{
-          width:"100%"
-        }} >
-          <Typography variant="h1" color="black" textAlign={"center"}>
+        <div className="mainLoading">
+          <div className="loading"></div>
+          <h1
+            style={{
+              textAlign: "center",
+              padding: "20px",
+              color: "rgb(6, 6, 49)",
+            }}
+          >
             Loading...
-          </Typography>
+          </h1>
         </div>
       )}
       {cart.map((carts) => (
-        <Grid item md={3}>
-          <Card className={classes.root} key={carts.id}>
+        <Grid item md={3} key={carts.flight_id}>
+          <Card className={classes.root}>
             <CardHeader
               avatar={
                 <Avatar className={classes.avatar}>
-                  {carts.name[0].toUpperCase()}
+                  {carts.flight_name[0].toUpperCase()}
                 </Avatar>
               }
-              title={carts.name}
+              title={carts.flight_name}
             />
             <CardContent>
               <Typography component="i">from</Typography>
@@ -70,7 +73,7 @@ function FlightCart() {
                 {carts.start} <ArrowRightAlt /> {carts.stop}
               </Typography>
               <Typography color="primary">{carts.date}</Typography>
-              <Typography>{carts.time} hours</Typography>
+              <Typography>{carts.hours} hours</Typography>
             </CardContent>
             <CardActions>
               <Link to={"/bookFlight"}>

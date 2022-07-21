@@ -1,24 +1,6 @@
 {
   "cart": [
     {
-      "name": "Katsina Airlines",
-      "start": "katsina",
-      "stop": "abuja",
-      "date": "2022-07-18",
-      "time": "2",
-      "price": "50000",
-      "id": 7
-    },
-    {
-      "name": "Nigerian Air ways",
-      "start": "lagos",
-      "stop": "abuja",
-      "date": "2022-07-11",
-      "time": "2",
-      "price": "500000",
-      "id": 8
-    },
-    {
       "name": "Kano Airlines",
       "start": "Kano",
       "stop": "lagos",
