@@ -13,6 +13,8 @@ import { Typography } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Axios from "axios";
+import MyLoading from "../../GeneralCompanents/MyLoading";
+import { MyPort } from "../../App";
 const blueButtonColor = "rgb(6, 6, 49)";
 const useStyles = makeStyles({
   root: {
@@ -33,29 +35,19 @@ function FlightCart() {
   const [ispending, setpending] = useState(true);
 
   useEffect(() => {
-    Axios.get("http://localhost:4000/home").then((data) => {
-      console.log(data.data);
+    createConnection();
+  }, []);
+
+  const createConnection = () => {
+    Axios.get(`http://localhost:${MyPort}/home`).then((data) => {
       setCart(data.data);
       setpending(false);
     });
-  }, []);
+  };
 
   return (
     <>
-      {ispending && (
-        <div className="mainLoading">
-          <div className="loading"></div>
-          <h1
-            style={{
-              textAlign: "center",
-              padding: "20px",
-              color: "rgb(6, 6, 49)",
-            }}
-          >
-            Loading...
-          </h1>
-        </div>
-      )}
+      {ispending && <MyLoading />}
       {cart.map((carts) => (
         <Grid item md={3} key={carts.flight_id}>
           <Card className={classes.root}>
