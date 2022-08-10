@@ -7,6 +7,7 @@ const useStyles = makeStyles({
   mainCard: {
     margin: 20,
     padding: 10,
+    marginTop: "100px",
   },
 });
 
@@ -17,6 +18,7 @@ const ABody = () => {
       <div
         style={{
           color: "black",
+        
         }}
       >
         <Typography>Flight</Typography>

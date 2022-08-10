@@ -1,10 +1,11 @@
 import { Button, TextField } from "@material-ui/core";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { unstable_HistoryRouter, useNavigate } from "react-router-dom";
 import LoginTextField from "../GeneralCompanents/LoginTextField";
 import MyButton from "../user/loginCompanents/MyButton";
 import Axios from "axios";
 import { MyPort } from "../App";
+import { AdminCartId } from "../Contexts";
 
 const AForm = () => {
   const [name, setName] = useState("");
@@ -22,8 +23,6 @@ const AForm = () => {
     }
   };
 
-
-
   const postData = () => {
     Axios.post(`http://localhost:${MyPort}/adminHome`, {
       flightName: name,
@@ -33,8 +32,7 @@ const AForm = () => {
       hours: hours,
       price: price,
       time: time,
-    }).then(()=>window.location.reload())
-    
+    }).then(() => window.location.reload());
   };
 
   return (

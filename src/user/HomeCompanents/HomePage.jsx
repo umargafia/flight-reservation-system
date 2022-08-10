@@ -15,7 +15,7 @@ function Home() {
       <div className="home-book-flight">
         <div className="home-book-flight  cardDiv">
           <FlightCart />
-        </div>
+        </div>  
 
         <div>
           <ViewMoreArrows />

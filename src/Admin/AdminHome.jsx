@@ -8,7 +8,6 @@ const AdminHome = () => {
   return (
     <div>
       <ANav />
-      <SearchArea />
       <ABody />
     </div>
   );

@@ -8,7 +8,7 @@ const useStyles = makeStyles({
   },
 });
 
-function LoginTextField({ typ, varian, text, change, error }) {
+function LoginTextField({ typ, varian, text, change, error,value }) {
   const classes = useStyles();
   return (
     <MyTextField
@@ -20,6 +20,7 @@ function LoginTextField({ typ, varian, text, change, error }) {
       className={classes.input}
       onChange={change}
       fullWidth
+      value={value}
     />
   );
 }
